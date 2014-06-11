@@ -1,0 +1,85 @@
+#web{
+    width: 960px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px #000;
+    border-radius: 20px;
+    
+}
+header{
+    padding: 1px;
+    background-color: #00aa00;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 20px 20px 0px 0px;
+}
+nav{
+    background-color: #000100;
+    padding: 2px;
+    text-align: center;
+    
+}
+nav ul{
+    list-style-type : none;
+    margin: 0;
+    padding: 0;
+    
+}
+nav ul>li{
+    display: inline-block;
+    width: 150px;
+    color: whitesmoke;
+    background-color: #00aa00;
+    border: 1px outset #00aa00;
+    cursor: pointer;
+    padding: 2px;
+    
+}
+#main{
+    overflow:auto;
+    background-color: #00aa00;
+}
+#contenido{
+    background-color: #00aa00;
+    min-height: 450px;
+    width: 78%;
+    padding: 1%;
+    float:left;
+    
+}
+aside{
+    background-color: #009933;
+    min-height: 450px;
+    width:18%;
+    padding: 1%;
+    float:  right;
+    
+}
+aside section{
+    text-align: center;
+    margin:2px;
+    border-radius: 20px;
+    min-height: 150px;
+    background-color: whitesmoke;
+}
+footer{
+    background-color: #009933;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 0px 0px 20px 20px;
+    
+}
+#contenido section{
+    width: 78%;
+    float: left;
+    padding: 5px;
+    border: 1px dashed #009933;
+    margin-left: 40px; 
+}
+article{
+    text-align: justify;
+    
+}
+article>div{
+    padding: 2px;
+}
