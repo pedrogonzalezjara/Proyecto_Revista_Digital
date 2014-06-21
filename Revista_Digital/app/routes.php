@@ -6,51 +6,35 @@ Route::get('/', function()
 });
 Route::controller("/test","TestController");
 
-Route::get('registro', function(){
-    return View::make('registro'); 
-});
-  
-Route::post('registro', function(){
- 
-    $input = Input::all();
-   
+
+ Route::post('login', function(){
+        $input = Input::all();
+        $correo = Input::get('rut');
+        $password = Input::get('contrasena');
         $reglas=array
             (
-                'rut'=>'required|min:5|integer',
-                'contrasena'=>'required|min:5'
+                'rut'=>'required',
+                'contrasena'=>'required'
             );
         $mensajes=array
             (
-                "integer"=>"ingrese solo números",
-                "required"=>"este campo es obligatorio",
-                "min"=>"debe tener como minimo 5 caracteres"
+                "required"=>"este campo es obligatorio"
             
             );
-        $validar=Validator::make($input,$reglas,$mensajes);
-        if($validar->fails())
-        {
-            return Redirect::back()->withErrors($validar);
-        }
-        else
-        {
-    $input['contrasena'] = Hash::make($input['contrasena']);
- 
-    Usuarios::create($input);
- 
-    return Redirect::to('registro')->with('mensaje_registro', 'Usuario Registrado');
-        }
-});
- Route::post('login', function(){
-     $correo = Input::get('rut');
-        $password = Input::get('contrasena');
-     
-
-     if(Auth::attempt(['rut' => $correo, 'contrasena' => $password])){
-        return Redirect::to('inicio');
-     }else{
-        return Redirect::to('/test/newhtml')->with('mensaje_login', 'Ingreso invalido. ');
-    
-        }
+            $validar=Validator::make($input,$reglas,$mensajes);
+            if($validar->fails())
+            {
+                return Redirect::to('/test/newhtml')->withErrors($validar);
+            }
+            else
+            {
+                if(Auth::attempt(['rut' => $correo, 'contrasena' => $password])){
+                return Redirect::to('inicio');
+                }
+                else{
+                return Redirect::to('/test/newhtml')->with('mensaje_login', 'Ingreso invalido. ');
+                }
+            }
 });
 Route::group(array('before' => 'auth'), function()
 {

@@ -1,6 +1,6 @@
 
 
-<h1>Agregar Noticia </h1>
+<h1>Agregar Articulo </h1>
 
   
     <div class="alert-box success">
@@ -12,19 +12,20 @@
     ?>
     
     <p>
-Título:     {{Form::text("titulo")}} {{$errors->first("titulo")}}
+Título: </br>     {{Form::text("titulo")}} {{$errors->first("titulo")}}
     </p>
     <p>
-Contenido:     {{Form::textarea("contenido")}}
+        Introducción: </br>      {{Form::textarea("introduccion")}}
     </p>
+Articulo:  </br>          {{Form::textarea("articulo")}}
     <p>
-Archivo:     {{Form::file("archivo")}}
+
     </p>
     <p>
     <hr />
     {{Form::submit("Enviar")}}
     </p>
-    (<a href="{{ URL::to('logout') }}">Salir</a>)
+    (<a href="{{ URL::to('logout') }}">Cerrar Sesion</a>)
     <?php
     echo Form::close();
     ?>

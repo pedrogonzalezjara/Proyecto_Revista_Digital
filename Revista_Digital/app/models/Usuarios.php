@@ -5,7 +5,7 @@ Class Usuarios extends Eloquent implements UserInterface{
  
     protected $table = 'usuarios';
     protected $fillable = array('rut','contrasena');//nombre', 'correo', 'password');
-    //public $timestamps=false;
+    public $timestamps=false;
  
     // este metodo se debe implementar por la interfaz
     public function getAuthIdentifier()

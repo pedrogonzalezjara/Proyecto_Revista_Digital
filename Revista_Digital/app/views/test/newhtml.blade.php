@@ -49,9 +49,17 @@
                                                     
                                                     <li>
                                                     
-                                                    {{$dato->contenido}}
-
+                                                        {{$dato->introduccion}}</br>
+                                                    
+                                                
+                                                
+                                                <?php
+                                                echo HTML::link("test/editar/" . $dato->id, 'Actualizar')
+                                                ?>
+                                                <?php echo HTML::link('test/delete/' . $dato->id,'Eliminar') ?>
                                                 </li>
+                                                
+                                                
                                                
                             </div>
                             
@@ -75,15 +83,15 @@
                          {{ Form::open(array('url' =>'login')) }}
     
                         {{ Form::label('rut', 'Rut'); }}<br/>
-                        {{ Form::text('rut'); }}
+                        {{ Form::text('rut'); }}{{$errors->first("rut")}}
                         {{ Form::label('contrasena', 'Clave'); }} <br/>
-                        {{ Form::password('contrasena'); }}
+                        {{ Form::password('contrasena'); }}{{$errors->first("contrasena")}}
                         {{ Form::submit('Ingresar'); }}
  
                         {{ Form::close() }}
                         <span>{{ Session::get('mensaje_login') }}</span>
                         
-                        <?php echo HTML::link("registro","Registrarse") ?>
+                        <?php echo HTML::link("test/registro","Registrarse") ?>
                         
                      </section>
                      <section>
