@@ -132,7 +132,8 @@ public function post_registro()
  
         }
 }
- /*Route::post('login', function(){
+ public function post_login()
+         {
         $input = Input::all();
         $correo = Input::get('rut');
         $password = Input::get('contrasena');
@@ -154,29 +155,26 @@ public function post_registro()
             else
             {
                 if(Auth::attempt(['rut' => $correo, 'contrasena' => $password])){
-                return Redirect::to('inicio');
+                return Redirect::to('test/inicio');
                 }
                 else{
                 return Redirect::to('/test/newhtml')->with('mensaje_login', 'Ingreso invalido. ');
                 }
             }
-});
-Route::group(array('before' => 'auth'), function()
-{
-    Route::get('inicio', function(){
+         }
+    public function get_inicio(){
         echo 'Bienvenido '. Auth::user()->rut . ', su Id es: '.Auth::user()->id ;
         
         return  View::make('test.add',compact('id'));
-    });
-});
+    }
 
-    Route::get('logout', array('before' => 'auth', function()
+    public function get_logout()
     {
          if(Auth::check()){
          Session::flush();
       }
         return Redirect::to('/test/newhtml')->with('mensaje_login', 'Gracias por visitarnos!.');
-    }));*/
+    }
         
     
 }

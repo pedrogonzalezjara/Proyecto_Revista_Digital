@@ -80,7 +80,7 @@
                      
                      <section>
                          <h3>Iniciar Sesión</h3>
-                         {{ Form::open(array('url' =>'login')) }}
+                         {{ Form::open(array('url' =>'test/login',"method"=>'post')) }}
     
                         {{ Form::label('rut', 'Rut'); }}<br/>
                         {{ Form::text('rut'); }}{{$errors->first("rut")}}

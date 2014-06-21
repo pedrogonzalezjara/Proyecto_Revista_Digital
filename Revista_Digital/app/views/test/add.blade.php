@@ -25,7 +25,7 @@ Articulo:  </br>          {{Form::textarea("articulo")}}
     <hr />
     {{Form::submit("Enviar")}}
     </p>
-    (<a href="{{ URL::to('logout') }}">Cerrar Sesion</a>)
+    (<a href="{{ URL::to('test/logout') }}">Cerrar Sesion</a>)
     <?php
     echo Form::close();
     ?>
