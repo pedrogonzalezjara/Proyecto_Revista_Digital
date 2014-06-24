@@ -1,4 +1,3 @@
-
 <h1>Editar Noticia </h1>
 
   

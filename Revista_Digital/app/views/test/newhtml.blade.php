@@ -1,6 +1,3 @@
-
-
-
 <html>
     <head>
         <meta charset="UTF-8">
@@ -14,11 +11,7 @@
                 <hgroup>
                     <h1>Revista Digital</h1>
                     <h2>Unidad Informatica UTEM</h2>
-                    
-                    
-                    
                 </hgroup>
-                
             </header>
             <nav>
                 <ul>
@@ -27,60 +20,32 @@
                     <li>Articulos</li>
                     <li>FAQ</li>
                     <li>Contacto</li>
-                    
                 </ul>
             </nav>
-            
             <div id="main">
-                
                 <div id="contenido">
-                    
-                    
                     <section>
-                        
-                        
-                        
                         <hr/>
-                        @foreach($datos as $dato)
+                            @foreach($datos as $dato)
                         <article>
                              <header><h3>{{$dato->titulo}}</h3></header>
                              <div>
-                                
-                                                    
-                                                    <li>
-                                                    
-                                                        {{$dato->introduccion}}</br>
-                                                    
-                                                
-                                                
-                                                <?php
-                                                echo HTML::link("test/editar/" . $dato->id, 'Actualizar')
-                                                ?>
-                                                <?php echo HTML::link('test/delete/' . $dato->id,'Eliminar') ?>
+                                        <li>
+                                             {{$dato->introduccion}}</br>
+                                              
                                                 </li>
-                                                
-                                                
-                                               
-                            </div>
-                            
-                            <footer></footer>
+                             </div>
                         </article>
-                         @endforeach
-                        Pagina Actual : <?php echo $datos->getCurrentPage();?>
-                        <?php echo $datos->links();?>
+                            @endforeach
+                            Pagina Actual : <?php echo $datos->getCurrentPage();?>
+                            <?php echo $datos->links();?>
                        
                     </section>
-                    
-                    
-                   
-                    
-                    
-                </div>
+                 </div>
                  <aside>
-                     
                      <section>
                          <h3>Iniciar Sesión</h3>
-                         {{ Form::open(array('url' =>'test/login',"method"=>'post')) }}
+                         {{ Form::open(array('url' =>'login')) }}
     
                         {{ Form::label('rut', 'Rut'); }}<br/>
                         {{ Form::text('rut'); }}{{$errors->first("rut")}}
@@ -98,16 +63,11 @@
                          <h3>Busqueda</h3><input type="text" name="busqueda">
                          <a href="">avanzada</a>
                      </section>
-                     
                  </aside>
             </div>
-            
             <footer>
                 <span>Ingeniería de Software</span>
             </footer>
-            
-        </div>
-        
-        
-    </body>
+       </div>
+   </body>
 </html>

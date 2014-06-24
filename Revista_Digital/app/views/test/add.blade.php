@@ -1,5 +1,3 @@
-
-
 <h1>Agregar Articulo </h1>
 
   
@@ -12,20 +10,21 @@
     ?>
     
     <p>
-Título: </br>     {{Form::text("titulo")}} {{$errors->first("titulo")}}
+        Título: </br>     {{Form::text("titulo")}} {{$errors->first("titulo")}}
     </p>
     <p>
         Introducción: </br>      {{Form::textarea("introduccion")}}
     </p>
-Articulo:  </br>          {{Form::textarea("articulo")}}
     <p>
-
+        Articulo:  </br>          {{Form::textarea("articulo")}}
     </p>
-    <p>
+        Rut: </br>     {{Form::text("rut")}} {{$errors->first("rut")}}
+
+    
     <hr />
     {{Form::submit("Enviar")}}
     </p>
-    (<a href="{{ URL::to('test/logout') }}">Cerrar Sesion</a>)
+    (<a href="{{ URL::to('logout') }}">Cerrar Sesion</a>)
     <?php
     echo Form::close();
     ?>
