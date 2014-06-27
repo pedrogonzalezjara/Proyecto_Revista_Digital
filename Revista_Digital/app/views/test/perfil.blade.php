@@ -15,7 +15,7 @@
             
             
             @foreach($datos as $dato)
-            @if($dato->rut == $rut
+            @if($dato->rut == $rut)
             {{$dato->titulo}}
             <?php
             echo HTML::link("test/editar/" . $dato->id, 'Actualizar')
