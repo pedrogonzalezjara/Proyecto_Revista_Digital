@@ -53,8 +53,7 @@ Route::group(array('before' => 'auth'), function()
     Route::get('logout', array('before' => 'auth', function()
     {
          if(Auth::check()){
-         Session::flush();
-      }
+         Auth::logout();
         return Redirect::to('/test/newhtml')->with('mensaje_login', 'Gracias por visitarnos!.');
     }));
 
