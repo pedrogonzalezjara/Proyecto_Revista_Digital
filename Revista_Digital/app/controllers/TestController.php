@@ -169,8 +169,11 @@ class TestController extends BaseController {
             else
             {
                 $usuario = new Usuarios;
-            $usuario->rut=$input['rut'];       
-        $usuario->contrasena = Hash::make($input['contrasena']);
+            $usuario->rut=$input['rut'];     
+            $contrasena = Hash::make($input['contrasena']);
+        $usuario->contrasena = $contrasena;
+        $usuario->remember_token = $contrasena;
+        
 
         $usuario->save();
 
