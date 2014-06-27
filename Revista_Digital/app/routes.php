@@ -44,9 +44,9 @@ Route::group(array('before' => 'auth'), function()
     
     Route::get('inicio', function(){
         echo 'Bienvenido '. Auth::user()->rut . ', su Id es: '.Auth::user()->id ;
-        $cuek = Auth::user()->rut;
+        $rut = Auth::user()->rut;
         $datos =Articulos::all();
-        return  View::make('/test/perfil',compact(array("datos","cuek")));
+        return  View::make('/test/perfil',compact(array("datos","rut")));
     });
 });
 
