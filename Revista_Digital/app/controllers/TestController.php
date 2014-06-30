@@ -109,8 +109,8 @@ class TestController extends BaseController {
                                    $genero=0;
                                $data->genero=$genero;
                                $data->direccion="comuna";
-                               //$perfil = Departamentos::where('nombre','=',$objeto->departamento)->first(array("id")); 
-                               $data->departamento_fk= 18;
+                               $perfil = Departamentos::where('nombre','=',$objeto->departamento['departamento'])->first(array("id"));  
+                               $data->departamento_fk= $perfil;
                                $data->save();
                                $usuario = new Usuarios;
                                $usuario->rut=Input::get('rut');  
@@ -158,8 +158,8 @@ class TestController extends BaseController {
                                    $genero=0;
                                $data->genero=$genero;
                                 $data->direccion="prueba";
-                               //$perfil = Departamentos::where('nombre','=',$objeto->departamento)->first(array("id")); 
-                               $data->departamento_fk=18;
+                               $perfil = Departamentos::where('nombre','=',$objeto->departamento['departamento'])->first(array("id")); 
+                               $data->departamento_fk=$perfil;
                                $data->save();
                                $usuario = new Usuarios;
                                $usuario->rut=Input::get('rut');  
