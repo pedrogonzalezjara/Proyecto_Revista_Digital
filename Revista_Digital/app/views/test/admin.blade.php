@@ -7,7 +7,9 @@
         {{ HTML::style('css/style_usuario.css') }}
         {{ HTML::style('css/fx.slide.css') }}
 
-	</head>
+	
+
+</head>
 <body>
     <div>
             <center>
@@ -17,7 +19,7 @@
     <div id="wrapper">
         <div id="header">
             <ul class="categories">
-                <li><a href="{{ URL::to('/') }}">Home</a></li>
+               <li><a href="{{ URL::to('/') }}">Home</a></li>
                 <li><a href="{{ URL::to('/contacto') }}">Contacto</a></li>
                 <li><a href="{{ URL::to('/faq') }}">FAQ</a></li>
             </ul>
@@ -32,17 +34,15 @@
       <div class="o post"> 
           {{Form::open(array('method'=>'post','url'=>'/articulos/add/',"name"=>"form", 'files' => true))}}
           @foreach($perfiles as $perfil)
-            @foreach($carreras as $carrera)
+            @foreach($departamentos as $departamento)
                 @if($perfil->rut == $rut)
-                    @if($carrera->id == $perfil->carrera_fk)
+                    @if($departamento->id == $perfil->departamento_fk)
                         <h1>Mi Perfil</h1>
                         <h3>Nombres:    {{$perfil->nombres}}</h3>
                         <h3>Apellidos:  {{$perfil->apellidos}}</h3>
                         <h3>Rut:        {{$perfil->rut}}</h3>
                         <h3>Fecha de nacimiento:  {{$perfil->fecha_nacimiento}}</h3>
-                        <h3>E-mail:     {{$perfil->email}}</h3>
-                        <h3>Carrera:    {{$carrera->nombre}}</h3>
-                        <h3>Estado:     {{$perfil->estado}}</h3>
+                        <h3>Departamento:    {{$departamento->nombre}}</h3>
                         </br>
                     @endif
                 @endif
@@ -52,9 +52,10 @@
         
        
         
-        [<a>{{HTML::link("articulos/add/".$rut, 'Crear Nuevo Post',compact("rut"))}}</a>]
+        [<a>{{HTML::link("articulos/add/".$rut, 'Crear Nuevo Post',compact("rut"))}}</a>]<hr>
+        [<a>{{HTML::link("articulos/aprobar/".$rut, 'Moderar Publicaciones Pendientes',compact("rut"))}}</a>]
         {{Form::close()}}
-        
+      
         
         <div class="break"></div>
       </div>

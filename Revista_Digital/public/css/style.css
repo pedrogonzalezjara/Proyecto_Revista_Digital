@@ -1,0 +1,269 @@
+
+html, body {border: 0; margin: 0; padding: 0;}
+head {
+  	title{
+            padding-top: 20px;
+        }
+}
+body {
+  	font: 85%/0.9 arial, helvetica, sans-serif;
+	background: url(images/bg_repeat.jpg) repeat 0 0;
+  	line-height: 130%;
+  	width: 100%;
+  	min-width: 970px;
+                text-align: center;
+}
+
+a {
+	color: #0099CC;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00CCFF;
+}
+
+a img {
+  border: none;/*remove border for linked images*/
+}
+
+/***** clear *****/
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* End hide from IE-mac */.clearfix {height: 1%;}
+
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.break {
+	font-size: 0;
+	width: 0; height: 0;
+	clear: both;
+}
+.alignleft {
+	float: left;
+	margin: 4px 10px 5px 0;
+}
+.alignright {
+	float: right;
+	margin: 4px 0 5px 10px;
+}
+.aligncenter {
+	text-align: center;
+}
+.hidden {
+	display: none;
+}
+
+
+/***** Main Layout ****/
+#container {
+  	width: 100%;
+  	height: 100%;
+  	text-align: center;/* IE fix to center the page */
+}
+
+#content {
+  	width: 900px;
+  	margin: 0 auto;/* center the page in Firefox */
+  	text-align: left;
+	padding: 20px;
+}
+
+
+#perfil {
+        padding-right: 30px;
+}
+
+
+
+
+
+
+
+/** BEGIN wrapper **/
+#wrapper {
+	width: 980px;
+	margin: auto auto;
+	text-align: left;
+}
+/** END wrapper **/
+
+#header {
+	height: 45px;
+	margin-bottom: 15px;
+}
+
+	#header .categories {
+		clear: both;
+		list-style-type: none;
+		height: 40px;
+		border-bottom: 5px solid #003366;
+		border-top: 1px solid #DDDDDD;
+		overflow: hidden;
+                }
+		#header .categories li {
+			float: left;
+		}
+		#header .categories li a {
+			display: block;
+			padding: 13px;
+			color: #333333;
+			border-right: 1px solid #dddddd;
+			text-decoration: none;
+		}
+		#header .categories li a:hover {
+			background-color: #003366;
+			color: #ffffff;
+		}
+	
+	
+/** END header **/
+
+
+/** BEGIN content **/
+#content {
+	clear: both;
+	width: 650px;
+	float: left;
+	padding-bottom: 10px;
+	padding-left: 170px;
+}
+	#content .recent {
+		border: 1px solid #DDDDDD;
+	}
+		#content .recent .post {
+			padding: 15px;
+			clear: both;
+		}
+			#content .recent .post h2 {
+				font-size: 1.5em;
+				margin-bottom: 10px;
+			}
+				#content .recent .post h2 a {
+					text-decoration: none;
+				}
+			#content .recent .post img {
+				float: right;
+				padding: 5px;
+				border: 1px solid #DDDDDD;
+				background-color: #FFFFFF;
+				margin-left: 20px;
+			}
+			#content .recent .post p {
+				line-height: 1.4em;
+				margin-bottom: 10px;
+			}
+			#content .recent .post .readmore {
+				font-size: 0.8em;
+			}
+		#content .recent .o {
+			background-color: #EEEEEE;
+		}
+	#content {
+		
+	}
+/** END content **/
+
+/** BEGIN sidebar **/
+#sidebar {
+	width: 320px;
+	float: right;
+	padding-right: 170px;
+
+}
+	#sidebar .box {
+		border: 1px solid #DDDDDD;
+		margin-bottom: 10px;
+	}
+		#sidebar .box h2 {
+			font-size: 0.9em;
+			text-transform: uppercase;
+			color: #003366;
+			background-color: #EEEEEE;
+			padding: 10px;
+			border-bottom: 1px solid #dddddd;
+		}
+		#sidebar .box ul {
+			list-style-type: square;
+			list-style-position: inside;
+			padding: 10px;
+		}
+			#sidebar .box ul li {
+				line-height: 1.4em;
+				color: #888888;
+				padding: 2px 0;
+			}
+			#sidebar .box ul li a {
+				color: #888888;
+				text-decoration: none;
+			}
+			#sidebar .box ul li a:hover {
+				color: #003366;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+		#sidebar .box .video {
+			padding: 12px;
+		}
+		#sidebar .box .flickr {
+			padding: 5px;
+			text-align: center;
+		}
+			#sidebar .box .flickr img {
+				margin: 6px;
+			}
+		#sidebar .box .tags {
+			padding: 10px;
+		}
+			#sidebar .box .tags a {
+				color: #888888;
+				text-decoration: none;
+			}
+			#sidebar .box .tags a:hover {
+				color: #003366;
+				text-decoration: underline;
+			}
+		#sidebar .box .popular {
+			list-style-type: none;
+			list-style-position: outside;
+		}
+			#sidebar .box .popular li {
+				padding: 5px 0;
+			}
+			#sidebar .box .popular li a {
+				color: #003366;
+				text-decoration: underline;
+				font-weight: bold;
+			}
+			#sidebar .box .popular li p {
+				padding-top: 5px;
+			}
+		
+	#sidebar .l {
+		float: left;
+		width: 155px;
+	}
+	#sidebar .r {
+		float: right;
+		width: 155px;
+	}
+/** END sidebar **/

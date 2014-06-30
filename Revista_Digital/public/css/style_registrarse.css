@@ -1,0 +1,183 @@
+
+html, body {border: 0; margin: 0; padding: 0;}
+head {
+  	title{
+            padding-top: 20px;
+        }
+}
+body {
+  	font: 85%/0.9 arial, helvetica, sans-serif;
+	background: url(images/bg_repeat.jpg) repeat 0 0;
+  	line-height: 130%;
+  	width: 100%;
+  	min-width: 970px;
+        padding-top: 37px;
+}
+
+a {
+	color: #0099CC;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #00CCFF;
+}
+
+a img {
+  border: none;/*remove border for linked images*/
+}
+
+/***** clear *****/
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+/* End hide from IE-mac */.clearfix {height: 1%;}
+
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+.break {
+	font-size: 0;
+	width: 0; height: 0;
+	clear: both;
+}
+.alignleft {
+	float: left;
+	margin: 4px 10px 5px 0;
+}
+.alignright {
+	float: right;
+	margin: 4px 0 5px 10px;
+}
+.aligncenter {
+	text-align: center;
+}
+.hidden {
+	display: none;
+}
+
+
+/***** Main Layout ****/
+#container {
+  	width: 100%;
+  	height: 100%;
+  	text-align: center;/* IE fix to center the page */
+}
+
+#content {
+  	width: 900px;
+  	margin: 0 auto;/* center the page in Firefox */
+  	text-align: left;
+	padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+/** BEGIN wrapper **/
+#wrapper {
+	width: 980px;
+	margin: auto auto;
+	text-align: left;
+}
+/** END wrapper **/
+
+#header {
+	height: 45px;
+	margin-bottom: 15px;
+}
+
+	#header .categories {
+		clear: both;
+		list-style-type: none;
+		height: 40px;
+		border-bottom: 5px solid #003366;
+		border-top: 1px solid #DDDDDD;
+		overflow: hidden;
+                }
+		#header .categories li {
+			float: left;
+		}
+		#header .categories li a {
+			display: block;
+			padding: 13px;
+			color: #333333;
+			border-right: 1px solid #dddddd;
+			text-decoration: none;
+		}
+		#header .categories li a:hover {
+			background-color: #003366;
+			color: #ffffff;
+		}
+	
+	
+/** END header **/
+
+
+/** BEGIN content **/
+#content {
+	clear: both;
+	width: 650px;
+	float: left;
+	padding-bottom: 10px;
+	padding-left: 220px;
+}
+	#content .recent {
+		border: 1px solid #DDDDDD;
+	}
+		#content .recent .post {
+			padding: 15px;
+			clear: both;
+		}
+                    #content .recent .post h1{
+				font: 2em helvetica,arial,sans-serif;
+                                margin-bottom: 10px;
+                                background: none repeat scroll 0% 0% #DBE2EC;
+                                color: #204066;
+			}
+                    
+                    #content .recent .post .campoLargo{
+                        margin: 5px 0px 0px;
+                        clear: both;
+                    }
+                    #content .recent .post .campoLargo .wwgrp {
+                            overflow: hidden;
+                            margin-bottom: 5px;
+                            display: block;
+                        }
+                            #content .recent .post .campoLargo .wwgrp .wwlbl {
+                                float: left;
+                                width: 150px;
+                            }
+                            #content .recent .post .campoLargo .wwgrp .wwctrl {
+                                float: left;
+                            }
+						
+		#content .recent .o {
+			background-color: #EEEEEE;
+		}
+
+/** END content **/
+
