@@ -57,7 +57,7 @@
                     </div>
                     <div id="wwgrp_nombre" class="wwgrp">
                         <span id="wwlbl_nombre" class="wwlbl">
-                            <label class="label" for="contra">Contaseña:</label>
+                            <label class="label" for="contra">Contraseña:</label>
                         </span>
                         <span id="wwctrl_nombre" class="wwctrl">
                           {{ Form::password('contrasena'); }}<h5>{{$errors->first('contrasena')}}</h5>
