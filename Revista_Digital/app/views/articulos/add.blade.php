@@ -48,7 +48,7 @@
                 </fieldset>
             </form>
             {{Form::close()}}
-            (<a href="{{ URL::to('inicio') }}">Volver atrás</a>)
+            
 
 
         </div>
