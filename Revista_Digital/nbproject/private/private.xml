@@ -3,16 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/routes.php</file>
             <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/controllers/TestController.php</file>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/test/newhtml.blade.php</file>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/test/add.blade.php</file>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/test/editar.blade.php</file>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/models/Usuarios.php</file>
             <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/test/registro.blade.php</file>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/models/Noticias.php</file>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/models/Articulos.php</file>
-            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/layouts/master.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/contacto.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/models/Categorias.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/hello.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/articulos/add.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/articulos/busqueda.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/articulos/editar.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/articulos/aprobar.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/faq.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/test/perfil.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/test/admin.blade.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/routes.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/controllers/ArticulosController.php</file>
+            <file>file:/C:/xampp/htdocs/laravel-master/Revista_Digital/app/views/articulos/post.blade.php</file>
         </group>
     </open-files>
 </project-private>

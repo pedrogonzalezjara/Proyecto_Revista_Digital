@@ -2,12 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    
+    @section('titulo')
     <title>
-        @section('titulo')
+        
         Revista Digital
-        @show
+        
     </title>
+    @show
+    
     
    
 </head>

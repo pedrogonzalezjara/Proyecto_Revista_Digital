@@ -35,7 +35,7 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
+	if (Auth::guest()) return Redirect::guest('/')->with('flash_error', 'You must be logged in to view this page!');
 });
 
 
@@ -78,7 +78,7 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
-Route::get('inicio', array('before' => 'auth', function()
+Route::filter('inicio', array('before' => 'auth', function()
 {
-    // Only authenticated users may enter...
+    "Only authenticated users may enter...";
 }));

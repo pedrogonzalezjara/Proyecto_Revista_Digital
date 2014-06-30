@@ -9,6 +9,9 @@ Class Usuarios extends Eloquent implements UserInterface,RemindableInterface{
     public $timestamps=false;
     protected $hidden = array('contrasena');
     
+    public function RolesUsuarios() {
+        return $this->hasMany('RolesUsuarios', 'usuario_fk');
+    }
     
  
     // este metodo se debe implementar por la interfaz
