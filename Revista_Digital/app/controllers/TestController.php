@@ -108,7 +108,7 @@ class TestController extends BaseController {
                                else
                                    $genero=0;
                                $data->genero=$genero;
-                               $data->direccion=$objeto->comuna['comuna'];
+                               $data->direccion="comuna";
                                $perfil = Departamentos::where('nombre','=',$objeto->departamento['departamento'])->first(array("id"));  
                                $data->departamento_fk= $perfil;
                                $data->save();
@@ -157,7 +157,7 @@ class TestController extends BaseController {
                                else
                                    $genero=0;
                                $data->genero=$genero;
-                                $data->direccion=$data->direccion=$objeto->comuna['comuna'];
+                                $data->direccion="prueba";
                                $perfil = Departamentos::where('nombre','=',$objeto->departamento['departamento'])->first(array("id")); 
                                $data->departamento_fk=$perfil;
                                $data->save();
